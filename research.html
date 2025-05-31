@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Projects - AI-EDGE REU Program</title>
+    <link rel="icon" href="https://reu-ai-edge-osu.github.io/resources/icon.jpg">
+    <link rel="shortcut icon" href="https://reu-ai-edge-osu.github.io/resources/icon.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            font-size: 1.15em;
+        }
+        .osu-banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        nav {
+            background: #f3f3f3;
+            text-align: center;
+            padding: 16px 0;
+            border-bottom: 2px solid #d9d9d9;
+        }
+        nav a {
+            color: #002654;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0 20px;
+            font-size: 1.22em;
+            letter-spacing: 0.5px;
+            transition: color 0.15s;
+        }
+        nav a:hover {
+            color: #ba0c2f;
+        }
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 32px auto;
+            padding: 0 20px;
+            flex: 1 0 auto;
+        }
+        .section {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 32px 28px;
+            font-size: 1.12em;
+            margin-bottom: 32px;
+        }
+        h1 {
+    		font-size: 2.3em;
+		}
+        h2 {
+            color: #002654;
+            font-size: 1.55em;
+        }
+        ul.topics-list {
+            padding-left: 20px;
+        }
+        .topic-item {
+            margin-bottom: 18px;
+        }
+        .topic-title {
+            color: #ba0c2f;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        .mentor {
+            color: #555;
+            font-size: 0.97em;
+            margin-left: 5px;
+        }
+        footer {
+            background: #f3f3f3;
+            text-align: center;
+            color: #666;
+            padding: 20px 0;
+            font-size: 0.98em;
+            margin-top: 0;
+        }
+        /*@media (max-width: 600px) {
+            .container, .section { padding: 14px; }
+            nav a { margin: 0 8px; }
+        }*/
+        .hamburger {
+		  display: none;
+		  background: none;
+		  border: none;
+		  font-size: 2em;
+		  color: #002654;
+		  cursor: pointer;
+		  position: absolute;
+		  left: 10px;
+		  top: 10px;
+		  z-index: 11;
+		  padding: 4px 10px;
+		  border-radius: 7px;
+		  transition: background 0.15s;
+		}
+		.hamburger:active, .hamburger:focus {
+		  background: #e1e6f1;
+		}
+
+		.nav-links {
+		  display: flex;
+		  flex-wrap: wrap;
+		  width: 100%;
+		  justify-content: center;
+		  align-items: center;
+		  transition: all 0.2s;
+		}
+		@media (max-width: 750px) {
+		  .nav-wrapper {
+		    justify-content: flex-start;
+		  }
+		  .hamburger {
+		    display: block;
+		  }
+		  .nav-links {
+		    flex-direction: column;
+		    align-items: flex-start;
+		    background: #f3f3f3;
+		    position: absolute;
+		    left: 0; top: 100%;
+		    width: 100%;
+		    padding: 12px 0 8px 10px;
+		    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+		    display: none;
+		    z-index: 10;
+		  }
+		  .nav-links.show {
+		    display: flex;
+		  }
+		  nav {
+		    position: relative;
+		    padding: 12px 0 12px 0;
+		    min-height: 56px;
+		    text-align: left;
+		  }
+		}
+
+    </style>
+</head>
+<body>
+    <img src="./resources/OSU.jpg" alt="The Ohio State University Banner" class="osu-banner">
+    <nav>
+        <a href="index.html">Overview</a>
+        <a href="lectures.html">Lectures</a>
+        <a href="research.html">Research Projects</a>
+        <a href="paper.html">Paper List</a>
+        <a href="news.html">Latest News</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://aiedge.osu.edu" target="_blank">AI-EDGE Institute</a>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="section">
+                <h2>Guidelines</h2>
+                <ul class="guidelines">
+                	<li class="guidelines-item">
+                        <div>Each <b>in-person student</b> will be paired with postdoc/grad student mentors</div>
+                    </li><br> 
+                    <li class="guidelines-item">
+                        <div><b>Project topics</b>: Selected by mutual interest of students and their mentors</div>
+                    </li><br> 
+                    <li class="guidelines-item">
+                        <div><b>Presentation</b>: Students will give a presentation towards the end of the program</div>
+                    </li><br> 
+                    <li class="guidelines-item">
+                        <div><b>Report</b>: Students will submit a report at the end of the program</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Research Topics</h2>
+                <ul class="topics-list">
+                    <li class="topic-item">
+                        <div class="topic-title">1. Lifelong Learning/Continual Learning
+                            <span class="mentor">— led by Dr. Hongbo Li (li.15242@osu.edu)</span>
+                        </div>
+                        <!-- <div>Brief introduction.</div> -->
+                    </li>
+                    <li class="topic-item">
+                        <div class="topic-title">2. Generative AI for Imaging
+                            <span class="mentor">— led by Dr. Yuchen Liang (liang.1439@osu.edu)</span>
+                        </div>
+                        <!-- <div>Brief introduction.</div> -->
+                    </li>
+                    <li class="topic-item">
+                        <div class="topic-title">3. Federated/Distributed Learning
+                            <span class="mentor">— led by Dr. Ziyue Luo (luo.1457@osu.edu)</span>
+                        </div>
+                        <!-- <div>Brief introduction.</div> -->
+                    </li>
+                    <li class="topic-item">
+                        <div class="topic-title">4. AI for Wireless Networking
+                            <span class="mentor">— led by Dr. Chengzhang Li (li.13488@osu.edu)</span>
+                        </div>
+                        <!-- <div>Brief introduction.</div> -->
+                    </li>
+                    <li class="topic-item">
+                        <div class="topic-title">5. AI for Security
+                            <span class="mentor">— led by Linxi Jiang (jiang.3002@buckeyemail.osu.edu)</span>
+                        </div>
+                        <!-- <div>Brief introduction.</div> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 AI-EDGE Institute, The Ohio State University. All rights reserved.
+    </footer>
+    <script>
+	  document.addEventListener('DOMContentLoaded', function () {
+	    const hamburger = document.querySelector('.hamburger');
+	    const navLinks = document.querySelector('.nav-links');
+	    hamburger.addEventListener('click', function () {
+	      navLinks.classList.toggle('show');
+	    });
+	    document.addEventListener('click', function (e) {
+	      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+	        navLinks.classList.remove('show');
+	      }
+	    });
+	  });
+	</script>
+</body>
+</html>
