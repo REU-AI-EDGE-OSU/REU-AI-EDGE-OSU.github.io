@@ -226,5 +226,19 @@
     <footer>
         &copy; 2025 AI-EDGE Institute, The Ohio State University. All rights reserved.
     </footer>
+	<script>
+	  document.addEventListener('DOMContentLoaded', function () {
+	    const hamburger = document.querySelector('.hamburger');
+	    const navLinks = document.querySelector('.nav-links');
+	    hamburger.addEventListener('click', function () {
+	      navLinks.classList.toggle('show');
+	    });
+	    document.addEventListener('click', function (e) {
+	      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+	        navLinks.classList.remove('show');
+	      }
+	    });
+	  });
+	</script>
 </body>
 </html>
