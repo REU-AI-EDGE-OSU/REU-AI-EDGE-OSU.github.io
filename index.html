@@ -88,37 +88,90 @@
             font-size: 0.98em;
             margin-top: 0;
         }
-        @media (max-width: 700px) {
-    	nav {
-        	padding: 10px 0;
-        	border-bottom-width: 1px;
-    	}
-    	nav a {
-        	display: inline-block;
-        	font-size: 1em;
-        	margin: 6px 8px;
-        	padding: 6px 0;
-    	}
-	}
-	@media (max-width: 500px) {
-	    nav {
-	        text-align: left;
-	    }
-	    nav a {
-	        display: block;
-	        margin: 0 auto;
-	        padding: 12px 0 12px 0;
-	        font-size: 1.06em;
-	        border-bottom: 1px solid #e2e2e2;
-	        max-width: 200px;
-	    }
-	}
+        nav {
+    background: #f3f3f3;
+    border-bottom: 2px solid #d9d9d9;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.nav-links a {
+    color: #002654;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 20px;
+    font-size: 1.18em;
+    letter-spacing: 0.5px;
+    transition: color 0.15s;
+    padding: 14px 0;
+    display: inline-block;
+}
+.nav-links a:hover {
+    color: #ba0c2f;
+}
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #002654;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 18px 8px 8px;
+}
+@media (max-width: 700px) {
+    .nav-container {
+        justify-content: flex-start;
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #f3f3f3;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+        border-bottom: 2px solid #d9d9d9;
+        z-index: 999;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links a {
+        margin: 0;
+        border-bottom: 1px solid #e2e2e2;
+        padding: 18px 0 18px 20px;
+        font-size: 1.11em;
+        text-align: left;
+        width: 100%;
+        max-width: none;
+    }
+}
+
 
     </style>
 </head>
 <body>
     <img src="./resources/OSU.jpg" alt="The Ohio State University Banner" class="osu-banner">
-    <nav>
+<!--     <nav>
         <a href="index.html">Overview</a>
         <a href="lectures.html">Lectures</a>
         <a href="research.html">Research Projects</a>
@@ -127,6 +180,23 @@
         <a href="contact.html">Contact</a>
         <a href="https://aiedge.osu.edu" target="_blank">AI-EDGE Institute</a>
     </nav>
+    <nav> -->
+    <div class="nav-container">
+        <div class="nav-logo"></div>
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+            &#9776;
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Overview</a>
+            <a href="lectures.html">Lectures</a>
+            <a href="research.html">Research Projects</a>
+	    <a href="paper.html">Paper List</a>
+            <a href="news.html">Latest News</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://aiedge.osu.edu" target="_blank">AI-EDGE Institute</a>
+        </div>
+    </div>
+</nav>
     <div class="content-wrapper">
         <div class="container">
             <div class="section">
@@ -150,4 +220,16 @@
         &copy; 2025 AI-EDGE Institute, The Ohio State University. All rights reserved.
     </footer>
 </body>
+<script>
+function toggleMenu() {
+    var links = document.getElementById('navLinks');
+    links.classList.toggle('show');
+    document.addEventListener('click', function closeMenu(e){
+        if (!links.contains(e.target) && !e.target.classList.contains('nav-toggle')) {
+            links.classList.remove('show');
+            document.removeEventListener('click', closeMenu);
+        }
+    });
+}
+</script>
 </html>
