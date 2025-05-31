@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectures - AI-EDGE REU Program</title>
+    <link rel="icon" href="https://reu-ai-edge-osu.github.io/resources/icon.jpg">
+    <link rel="shortcut icon" href="https://reu-ai-edge-osu.github.io/resources/icon.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            font-size: 1.15em;
+        }
+        .osu-banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        nav {
+            background: #f3f3f3;
+            text-align: center;
+            padding: 16px 0;
+            border-bottom: 2px solid #d9d9d9;
+        }
+        nav a {
+            color: #002654;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0 20px;
+            font-size: 1.22em;
+            letter-spacing: 0.5px;
+            transition: color 0.15s;
+        }
+        nav a:hover {
+            color: #ba0c2f;
+        }
+        .section {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 32px 28px;
+            font-size: 1.12em;
+            margin-bottom: 32px;
+        }
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 32px auto;
+            padding: 0 20px;
+            flex: 1 0 auto;
+        }
+        .lecture-section {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+        .lecture-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 28px;
+            background: #f3f3f3;
+            cursor: pointer;
+            user-select: none;
+            font-weight: bold;
+            font-size: 1.17em;
+            border-left: 5px solid #002654;
+            transition: background 0.2s;
+        }
+        .lecture-header:hover {
+            background: #e7e7e7;
+        }
+        .lecture-content {
+            display: none;
+            padding: 22px 32px;
+            font-size: 1.07em;
+        }
+        .lecture-section.open .lecture-content {
+            display: block;
+            animation: fadeIn 0.25s;
+        }
+        .toggle-icon {
+            font-size: 1.5em;
+            color: #ba0c2f;
+            transition: transform 0.2s;
+        }
+        .lecture-section.open .toggle-icon {
+            transform: rotate(90deg);
+        }
+        h1 {
+    		font-size: 2.3em;
+		}
+        h2 {
+            color: #002654;
+            font-size: 1.55em;
+        }
+        ul {
+            margin: 6px 0 10px 22px;
+        }
+        footer {
+            background: #f3f3f3;
+            text-align: center;
+            color: #666;
+            padding: 20px 0;
+            font-size: 0.98em;
+            margin-top: 0;
+        }
+        @media (max-width: 600px) {
+            .container, .lecture-content, .lecture-header { padding-left: 10px; padding-right: 10px; }
+            nav a { margin: 0 8px; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-8px);}
+            to   { opacity: 1; transform: none;}
+        }
+    </style>
+</head>
+<body>
+    <img src="./resources/OSU.jpg" alt="The Ohio State University Banner" class="osu-banner">
+    <nav>
+        <a href="index.html">Overview</a>
+        <a href="lectures.html">Lectures</a>
+        <a href="research.html">Research Projects</a>
+        <a href="paper.html">Paper List</a>
+        <a href="news.html">Latest News</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://aiedge.osu.edu" target="_blank">AI-EDGE Institute</a>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container">
+        	<h2>Location</h2>
+        		<div>In person students: Dreese Lab 260, 2015 Neil Ave, Columbus, OH 43210</div><br>
+        		<div>Online students: Zoom</div><br>
+            <h2>Lecture Details</h2>
+            <div class="lecture-section">
+                <div class="lecture-header" onclick="toggleLecture(this)">
+                    Week 1: Introduction to AI, Machine Learning, Coding using Python <span class="toggle-icon">&#9654;</span>
+                </div>
+                <div class="lecture-content">
+                    <b>Lecturers:</b>
+                    <ul>
+                        <li>Ziyue Luo</li>
+                        <li>Zhiyao Zhang</li>
+                    </ul>
+                    <b>Reading Materials:</b>
+                    <!-- <ul>
+                        <li><a href="resources/Week1a.pptx" target="_blank">Week 1 Slides_1</a></li>
+                    </ul> -->
+                    <ul>
+                        <li>Week 1 Slides</a></li>
+                    </ul>
+                    <b>Assignments:</b>
+                    <ul>
+                        <li>Assignment 1: TBD</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lecture-section">
+                <div class="lecture-header" onclick="toggleLecture(this)">
+                    Week 2: Basic Concept of Machine Learning, Autoregressive Transformer, Language Models <span class="toggle-icon">&#9654;</span>
+                </div>
+                <div class="lecture-content">
+                    <b>Lecturers:</b>
+                    <ul>
+                        <li>Hongbo Li</li>
+                        <li>Qinhang (William) Wu</li>
+                    </ul>
+                    <b>Reading Materials:</b>
+                    <ul>
+                        <li>Week 2 Slides</a></li>
+                    </ul>
+                    <b>Assignments:</b>
+                    <ul>
+                        <li>Assignment 2: TBD</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lecture-section">
+                <div class="lecture-header" onclick="toggleLecture(this)">
+                    Week 3: Basic Probability Concepts, Generative Models, Generative Adversarial Networks (GANs) <span class="toggle-icon">&#9654;</span>
+                </div>
+                <div class="lecture-content">
+                    <b>Lecturers:</b>
+                    <ul>
+                        <li>Yuchen Liang</li>
+                        <li>Ziyue Luo</li>
+                        <li>TBD</li>
+                    </ul>
+                    <b>Reading Materials:</b>
+                    <ul>
+                        <li>Week 3 Slides</a></li>
+                    </ul>
+                    <b>Assignments:</b>
+                    <ul>
+                        <li>Assignment 3: TBD</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lecture-section">
+                <div class="lecture-header" onclick="toggleLecture(this)">
+                    Week 4: Generative Models: Diffusion Models <span class="toggle-icon">&#9654;</span>
+                </div>
+                <div class="lecture-content">
+                    <b>Lecturers:</b>
+                    <ul>
+                        <li>Yuchen Liang</li>
+                        <li>TBD</li>
+                    </ul>
+                    <b>Reading Materials:</b>
+                    <ul>
+                        <li>Week 4 Slides</a></li>
+                    </ul>
+                    <b>Assignments:</b>
+                    <ul>
+                        <li>Assignment 4: TBD</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lecture-section">
+                <div class="lecture-header" onclick="toggleLecture(this)">
+                    Week 5: Introduction of wireless networks; AI for wireless networking Design <span class="toggle-icon">&#9654;</span>
+                </div>
+                <div class="lecture-content">
+                    <b>Lecturer:</b>
+                    <ul>
+                        <li>Prof. Jim Kurose</li>
+                    </ul>
+                    <b>Reading Materials:</b>
+                    <ul>
+                        <li>Week 5 Slides</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lecture-section">
+                <div class="lecture-header" onclick="toggleLecture(this)">
+                    Week 6: AI for security Design <span class="toggle-icon">&#9654;</span>
+                </div>
+                <div class="lecture-content">
+                    <b>Lecturers:</b>
+                    <ul>
+                        <li>Chengzhang Li</li>
+                        <li>Linxi Jiang</li>
+                    </ul>
+                    <b>Reading Materials:</b>
+                    <ul>
+                        <li>Week 6 Slides</a></li>
+                    </ul>
+                    <b>Assignments:</b>
+                    <ul>
+                        <li>Assignment 6: TBD</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lecture-section">
+                <div class="lecture-header" onclick="toggleLecture(this)">
+                    Week 7: Distributed AI; Federated Learning <span class="toggle-icon">&#9654;</span>
+                </div>
+                <div class="lecture-content">
+                    <b>Lecturers:</b>
+                    <ul>
+                        <li>Ziyue Luo</li>
+                        <li>Peiwen Qiu</li>
+                    </ul>
+                    <b>Reading Materials:</b>
+                    <ul>
+                        <li>Week 7 Slides</a></li>
+                    </ul>
+                    <b>Assignments:</b>
+                    <ul>
+                        <li>Assignment 7: TBD</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lecture-section">
+                <div class="lecture-header" onclick="toggleLecture(this)">
+                    Week 8: Final Presentations <span class="toggle-icon">&#9654;</span>
+                </div>
+                <div class="lecture-content">
+                    <!-- <b>Topics:</b>
+                    <ul>
+                        <li>TBD</li>
+                    </ul> -->
+                   <!--  <b>Reading Materials:</b>
+                    <ul>
+                        <li><a href="resources/slides.pptx" target="_blank">Week 8 Slides</a></li>
+                    </ul> -->
+                    <b>Assignments:</b>
+                    <ul>
+                        <li>Assignment 8: Final Report & Presentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 AI-EDGE Institute, The Ohio State University. All rights reserved.
+    </footer>
+    <script>
+        function toggleLecture(header) {
+            const section = header.parentElement;
+            const isOpen = section.classList.contains('open');
+            document.querySelectorAll('.lecture-section').forEach(sec => {
+                sec.classList.remove('open');
+            });
+            if (!isOpen) {
+                section.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>
