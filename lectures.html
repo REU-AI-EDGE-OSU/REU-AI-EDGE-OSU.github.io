@@ -187,6 +187,28 @@
 		    text-align: left;
 		  }
 		}
+
+        .paper-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .paper-list li {
+            margin-bottom: 6px;
+        }
+
+        .paper-list a {
+            color: #0044cc;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .paper-list a:hover {
+            color: #d23669;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -463,6 +485,7 @@
                 </div>
             </div>
             <h2>Paper list</h2>
+            <ul class="paper-list">
                 <li class="guidelines-item">
                         <div><a href="https://papoef.wordpress.com/wp-content/uploads/2016/05/nature16961-copy.pdf" target="_blank">Mastering the Game of Go with Deep Neural Networks and Tree Search</a></div>
                     </li>
@@ -472,7 +495,7 @@
                 <li class="guidelines-item">
                         <div><a href="https://www.nature.com/articles/nature14539" target="_blank">Deep Learning</a></div>
                     </li>
-		<li class="guidelines-item">
+		        <li class="guidelines-item">
                         <div><a href="https://yang-song.net/blog/2021/score/" target="_blank">Generative Modeling by Estimating Gradients of the Data Distribution</a></div>
                     </li>
                 <li class="guidelines-item">
@@ -481,7 +504,7 @@
                 <li class="guidelines-item">
                         <div><a href="https://medium.com/@steinsfu/stable-diffusion-controlnet-clearly-explained-f86092b62c89" target="_blank">Stable Diffusion — ControlNet Clearly Explained!</a></div>
                     </li>
-		<li class="guidelines-item">
+		        <li class="guidelines-item">
                         <div><a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf" target="_blank">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></div>
                     </li>
                 <li class="guidelines-item">
@@ -490,9 +513,10 @@
                 <li class="guidelines-item">
                         <div><a href="https://arxiv.org/pdf/2005.14165" target="_blank">Language Models are Few-Shot Learners</a></div>
                     </li>
-		<li class="guidelines-item">
+		        <li class="guidelines-item">
                         <div><a href="https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/" target="_blank">What Is ChatGPT Doing and Why Does It Work?</a></div>
                     </li>
+            </ul>
         </div>
     </div>
     <footer>
